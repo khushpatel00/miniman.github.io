@@ -1,0 +1,71 @@
+@media (max-width: 575px) {
+    .bannerImage {
+        display: none;
+    }
+
+    .bannerTitle {
+        font-size: 40px;
+    }
+
+    .about span {
+        font-size: 10px;
+        padding-right: 5px;
+    }
+
+    .about i {
+        font-size: 15px;
+    }
+}
+
+@media (min-width:576px) {
+    .bannerImage {
+        display: none;
+    }
+
+    .bannerTitle {
+        font-size: 50px;
+    }
+
+    .about span {
+        font-size: 13px;
+        padding-right: 5px;
+    }
+
+    .about i {
+        font-size: 15px;
+    }
+}
+
+@media (min-width:768px) {
+    .about span {
+        font-size: 20px;
+        padding-right: 5px;
+    }
+    .edu-head{
+        justify-content: center;
+    }
+    .about i {
+        font-size: 20px;
+    }
+    .bannerTitle{
+        font-size: 60px;
+    }
+    .achieve-img img{
+        width: 50%;
+    }
+}
+
+@media (min-width:992px) {
+    .bannerImage {
+        display: unset;
+        width: 25%;
+    }
+}
+
+@media (min-width:1200px) {
+    .bannerImage {
+        width: 20%;
+    }
+}
+
+@media (min-width:1400px) {}
