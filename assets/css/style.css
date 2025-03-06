@@ -1,0 +1,239 @@
+.text-primary{
+ color: #ff9700!important;
+}
+body{
+	font-family: 'Outfit'!important;
+  scroll-behavior: smooth;
+}
+header{
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.777);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(6.7px);
+}
+ul li .nav-link {
+   
+  position: relative;
+  
+}
+
+ul li .nav-link::before {
+  content: ''; 
+  position: absolute; 
+  bottom: 5px;
+  right: 0;
+  width: 0; 
+  height: 1.5px; 
+  background-color: white;
+  transition: 0.5s;
+}
+
+ul li .nav-link:hover::before  {
+  width: 100%; 
+  left: 0;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+::-webkit-scrollbar-track {
+  background: black;
+}
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 43px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff2b;
+}
+::placeholder {
+  color: rgba(255, 255, 255, 0.3)!important;
+}
+a{
+  display: inline-block!important;
+}
+/* banner start */
+.bannerTitle{
+	/* font-size: 60px; */
+	font-weight: 700;
+  padding: 100px 0 50px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0d6efd;
+
+}
+.bannerTitle .lead{
+	font-size: 0.45em;
+  -webkit-text-stroke-width: 0;
+}
+.bannerButton{
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.bannerButton {
+  -webkit-tap-highlight-color: 	transparent;
+  background-color: #000; 
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+.bannerButton:disabled {
+  cursor: default;
+}
+.bannerButton {
+  border-radius: 99rem;
+  border-width: 2px;
+  padding: 0.8rem 3rem;
+  z-index: 0;
+}
+.bannerButton,
+.bannerButton .text-container {
+  overflow: hidden;
+  position: relative;
+}
+.bannerButton .text-container {
+  display: block;
+  mix-blend-mode: difference;
+}
+.bannerButton .text {
+  display: block;
+  position: relative;
+}
+.bannerButton:hover .text {
+  -webkit-animation: move-up-alternate 0.3s forwards;
+  animation: move-up-alternate 0.3s forwards;
+}
+
+@keyframes move-up-alternate {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(80%);
+  }
+  51% {
+    transform: translateY(-80%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.bannerButton:after,
+.bannerButton:before {
+  --skew: 0.2;
+  background: 
+#fff;
+  content: "";
+  display: block;
+  height: 102%;
+  left: calc(-50% - 50% * var(--skew));
+  pointer-events: none;
+  position: absolute;
+  top: -104%;
+  transform: skew(calc(150deg * var(--skew))) translateY(var(--progress, 0));
+  transition: transform 0.2s ease;
+  width: 100%;
+}
+.bannerButton:after {
+  --progress: 0%;
+  left: calc(50% + 50% * var(--skew));
+  top: 102%;
+  z-index: -1;
+}
+.bannerButton:hover:before {
+  --progress: 100%;
+}
+.bannerButton:hover:after {
+  --progress: -102%;
+}
+.Button{
+  font-weight: 700;
+  border: 0 solid;
+  border-radius: 99rem;
+  border-width: 2px;
+  padding: 0.8rem 3rem;
+  transition: 0.5s cubic-bezier(0.04, 0.5, 0, 1.01);
+}
+.Button:hover{
+  background-color: #fff;
+  color: #000!important;
+  padding: 0.8rem 3.5rem;
+}
+.bannerImage{
+  right: 0;
+  top: 0;
+}
+.bannerImage img{
+  background: #00000070;
+}
+@keyframes rotate {
+  from{
+    transform: rotateZ(0deg);
+  }
+  to{
+    transform: rotateZ(360deg);
+  }
+  
+}
+/* banner end */
+/* about start */
+.about{
+  position: relative;
+}
+.typoText{
+  position: absolute;
+  right: -120px;
+  top: 200px;
+  font-size: 120px;
+  font-weight: 700;
+  transform: rotate(90deg);
+  opacity: 0.2;
+  color: black;
+}
+.about p.heading:after{
+  background-color: #000;
+}
+p.heading{
+  position: relative;
+}
+p.heading:after{
+  position: absolute;
+  content: '';
+  box-sizing: border-box;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  bottom: 0;
+  left: -10px;
+}
+.about span.info{
+  padding-right: 50px;
+}
+.about i{
+  padding-right: 10px;
+}
+/* about end */
+/* education start */
+
+
+.edu-content{
+  margin: 20px 0 20px 12.5px;
+  justify-content: center;
+}
+.achieve-img img{
+  margin: 50px auto;
+}
+/* education end */
+/* project start */
+.project-img img, .achieve-img img, .blog-img img{
+  transition: 1s cubic-bezier(0.04, 0.89, 0, 1.01);
+}
+.project-img img:hover, .achieve-img img:hover, .blog-img img:hover{
+  transform: scale(1.05);
+}
+/* project end */
